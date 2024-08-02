@@ -194,6 +194,14 @@ bg-success {
         border-color: #134b5f;
     }
 
+.footer {
+    background-color: #343a40; 
+    color: #ffffff; 
+    padding: 10px 0;
+    text-align: center; 
+    height: 10vh;
+}
+
 
 
     .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
