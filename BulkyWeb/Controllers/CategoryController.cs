@@ -33,7 +33,8 @@ namespace BulkyWeb.Controllers
             if (ModelState.IsValid)
             {
                 appDbContext.Categories.Add(category);
-                appDbContext.SaveChanges(); 
+                appDbContext.SaveChanges();
+                TempData["success"] = "Category created successfully"; 
                 return RedirectToAction("Index");
             }
 
@@ -68,6 +69,8 @@ namespace BulkyWeb.Controllers
             {
                 appDbContext.Categories.Update(category);
                 appDbContext.SaveChanges();
+                TempData["success"] = "Category updated successfully";
+
                 return RedirectToAction("Index");
             }
             return View(category);
@@ -96,6 +99,7 @@ namespace BulkyWeb.Controllers
 
             appDbContext.Categories.Remove(category);
             appDbContext.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
     }
